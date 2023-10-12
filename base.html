@@ -1,0 +1,110 @@
+ 
+<!doctype html>
+<html lang="en">
+
+ <style type="text/css">
+     
+ </style>
+
+<script type="text/javascript"> 
+
+
+
+</script>
+
+  <head>
+     
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    
+   
+
+       {% load static %} 
+       <link rel="stylesheet"  href="{% static 'css/amsStyle.css' %} "> 
+      
+    
+    
+
+    <title>Smart Sustainabillity Air Management System (AMS)</title>
+  </head>
+  <body>
+    <!------AMS -Nav-Bar----------------------------------------------------------------------------------------->
+      
+
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">
+      
+       <img src ="{% static 'image/temasek logo.jpg' alt="Temasek Poly Logo" %}" >
+
+    </div>
+
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'realtime' %}">Real Time Monitoring</a></li>
+
+        
+
+        <li><a href="{% url 'mainams' %}">Main AMS Analytics</a></li>
+        <li><a href="{% url 'slaveams' %}">Slave AMS Analytics</a></li>
+      </div>
+    </ul>
+  </nav>
+
+
+    <!------AMS- Nav-Bar----------------------------------------------------------------------------------------->
+
+
+
+ <br>
+
+
+    <div class ="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+
+<!-------------------------------------Footer ------------------------------------------------------------------------->
+
+<footer>
+        <div class="footer-content">
+            <h3>Temasek Polytechnic Advance Manufacturing Center</h3>
+            <p>Developed for Sustainabillity</p>
+           
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Air Management Systems</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                     
+                      </ul>
+                    </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+</html>
